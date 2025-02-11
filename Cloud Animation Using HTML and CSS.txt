@@ -1,0 +1,53 @@
+<html>
+<body>
+    <style>
+        body {
+background: linear-gradient(to bottom, #87CEEB, #ffffff);
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.cloud {
+position: absolute;
+width: 120px;
+height: 60px;
+background: white;
+border-radius: 50%;
+box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.cloud::before, .cloud::after {
+content: "";
+position: absolute;
+background: white;
+border-radius: 50%;
+}
+.cloud::before {
+width: 80px;
+height: 80px;
+top: -30px;
+left: 20px;
+}
+.cloud::after {
+width: 100px;
+height: 100px;
+top: -50px;
+left: 60px;
+}
+.cloud1 { top: 20%; left: -150px; animation: moveClouds 20s linear infinite; }
+.cloud2 { top: 50%; left: -200px; animation: moveClouds 25s linear infinite; }
+.cloud3 { top: 75%; left: -250px; animation: moveClouds 30s linear infinite; }
+@keyframes moveClouds {
+from { transform: translateX(0); }
+to { transform: translateX(190vw); }
+}
+    </style>
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+<script>
+    
+</script>
+</body>
+</html>
